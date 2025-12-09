@@ -84,28 +84,14 @@ Quantitative feature contributions:
 ```
 dual-lstm-energy-emissions-forecasting/
 │
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb      # Data acquisition and preprocessing
-│   ├── 02_feature_engineering.ipynb # VIF analysis and feature selection
-│   ├── 03_EDA.ipynb                # Exploratory data analysis
-│   ├── 04_model_training.ipynb     # LSTM training with validation
-│   ├── 05_baseline_comparison.ipynb # ARIMA, GRU, CNN-LSTM benchmarks
-│   ├── 06_scenario_analysis.ipynb  # Solar penetration simulations
-│   └── 07_shap_analysis.ipynb      # Explainability analysis
-│
-├── src/
-│   ├── data_preprocessing.py       # Data loading and cleaning functions
-│   ├── feature_engineering.py      # Feature creation and VIF analysis
-│   ├── models.py                   # LSTM and baseline model definitions
-│   ├── evaluation.py               # Metrics and statistical tests
-│   └── visualization.py            # Plotting functions
+├── 01.data_cleaning.ipynb          # Data acquisition, preprocessing, and cleaning
+├── 02.Feature_engg.ipynb           # Feature engineering, VIF analysis, lag features
+├── 03.EDA.ipynb                    # Exploratory data analysis and visualization
+├── 04.results.ipynb                # Model training, baseline comparison, scenario 
+│                                   # analysis, SHAP explainability, and evaluation
 │
 ├── data/
-│   └── README.md                   # Data source information
-│
-├── results/
-│   ├── figures/                    # Generated plots
-│   └── tables/                     # Performance metrics
+│   └── README.md                   # Data source information (EIA-930)
 │
 ├── requirements.txt                # Python dependencies
 ├── LICENSE                         # MIT License
@@ -148,26 +134,17 @@ scipy>=1.8.0
 ### Running the Analysis
 
 ```bash
-# 1. Data preprocessing
-jupyter notebook notebooks/01_data_cleaning.ipynb
+# 1. Data preprocessing and cleaning
+jupyter notebook 01.data_cleaning.ipynb
 
 # 2. Feature engineering with VIF analysis
-jupyter notebook notebooks/02_feature_engineering.ipynb
+jupyter notebook 02.Feature_engg.ipynb
 
 # 3. Exploratory data analysis
-jupyter notebook notebooks/03_EDA.ipynb
+jupyter notebook 03.EDA.ipynb
 
-# 4. Model training
-jupyter notebook notebooks/04_model_training.ipynb
-
-# 5. Baseline comparisons
-jupyter notebook notebooks/05_baseline_comparison.ipynb
-
-# 6. Solar penetration scenarios
-jupyter notebook notebooks/06_scenario_analysis.ipynb
-
-# 7. SHAP explainability
-jupyter notebook notebooks/07_shap_analysis.ipynb
+# 4. Model training, baselines, scenarios, and SHAP analysis
+jupyter notebook 04.results.ipynb
 ```
 
 ---
